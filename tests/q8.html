@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q8</title>
+</head>
+
+<body>
+
+    <label>
+        سال تولد خود را وارد کنید
+        <br><br>
+        <input id="age">
+        <button onclick="calculateDays()">محاسبه</button>
+    </label>
+    <br>
+    <h3 id="test"></h3>
+
+    <script>
+
+        function calculateDays() {
+            let age = parseInt(document.getElementById('age').value);
+
+            let days = age * 365 + (age / 4);
+
+            document.getElementById('test').innerText = "تعداد روزهای عمر:" + ' ' + days;
+        }
+
+    </script>
+</body>
+
+</html>

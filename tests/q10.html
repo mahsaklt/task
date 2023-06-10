@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q10</title>
+</head>
+
+<body>
+
+    <label> سال تولد :
+        <input id="Birth">
+    </label>
+    <br><br>
+    <label> سال کنونی :
+        <input id="this-year">
+    </label>
+    <br><br>
+    <button onclick=" calculateAge()">محاسبه</button>
+    <br>
+    <h3 id="test"></h3>
+
+
+
+    <script>
+        function calculateAge() {
+            let birthYear = parseInt(document.getElementById('Birth').value);
+            let currentYear = parseInt(document.getElementById('this-year').value);
+
+            let birthDate = new Date(birthYear); 
+            let currentDate = new Date(currentYear);
+
+            let age = currentDate - birthDate; 
+            let Month = age * 12;
+            let days = age * 365;
+            let hours = days * 24;
+            let minute = hours * 60;
+            let seconds= minute * 60;
+
+            document.getElementById('test').innerText =
+            
+            age + ' '+ 'سال' + '\n' +
+            Month + ' '+ 'ماه' + '\n' +
+            days + ' '+ 'روز' + '\n' +
+            hours + ' '+ 'ساعت' + '\n' +
+            minute + ' '+ 'دقیقه' + '\n' +
+            seconds + ' '+ 'ثانیه';
+
+
+        }
+
+    </script>
+</body>
+
+</html>

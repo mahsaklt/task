@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q9</title>
+</head>
+
+<body>
+    <label> ساعت:
+        <input id="hour">
+    </label>
+    <br>
+    <br>
+    <label> دقیقه:
+        <input id="minute">
+    </label>
+    <br><br>
+    <button ondblclick="calculateTime()">محاسبه</button>
+
+    <br>
+    <h3 id="test"></h3>
+
+    <script>
+        function calculateTime() {
+            let hour = parseInt(document.getElementById('hour').value);
+            let minute = parseInt(document.getElementById('minute').value);
+
+            let totalMinutes = hour * 60 + minute;
+            let totalSeconds = totalMinutes * 60;
+
+            document.getElementById('test').innerText = "زمان بر حسب دقیقه: " + totalMinutes + '\n' + "\nزمان بر حسب ثانیه: " + totalSeconds;
+        }
+
+    </script>
+</body>
+
+</html>

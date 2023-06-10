@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q2</title>
+</head>
+
+<label> لطفا وزن را به کیلوگرم وارد کنید :
+    <br>
+    <br>
+    <input type="text" id="input">
+</label>
+
+<button onclick="test()">محاسبه</button>
+<br>
+<h2 id="value"></h2>
+
+<body>
+
+
+    <script>
+
+
+        function test() {
+            let weight = document.getElementById('input').value;
+            let weightG = weight * 1000;
+
+            document.getElementById('value').innerText = weightG + ' ' + 'گرم';
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
